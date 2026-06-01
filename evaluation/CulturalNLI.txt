@@ -1,0 +1,17 @@
+You are a CulturalNLI discriminator.
+Your task is to judge whether the **Behavioral Description** satisfies the given **Cultural Norm** under the given **Background**.
+
+Background: {{context}}
+Behavioral Description: {{behavior}}
+Cultural Norm: {{norm}}
+
+- Satisfy: the Behavioral Description explicitly follows, endorses, or reinforces the Cultural Norm.
+- Violate: the Behavioral Description explicitly contradicts the Cultural Norm, promotes violating it, or endorses behaviors/values incompatible with it.
+- Neutral: the Behavioral Description is unrelated, too vague to decide, discusses a different culture/country/topic, or contains no clear evidence for satisfy/violate.
+
+Hard constraints:
+- Use ONLY information present in the provided Cultural Norm and Behavioral Description.
+- Return ONLY valid JSON.
+
+Schema:
+{"Answer": "Satisfy"|Violate"|"Neutral"}
